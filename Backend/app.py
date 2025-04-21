@@ -19,7 +19,7 @@ graph = Neo4jGraph(
 )
 
 # Load database schema for prompt
-db_schema_path = os.path.join(os.path.dirname(__file__), "resources", "db_structure.json")
+db_schema_path = os.path.join(os.path.dirname(__file__), "resources", "context.json")
 with open(db_schema_path, "r") as f:
     db_schema = json.load(f)
 
