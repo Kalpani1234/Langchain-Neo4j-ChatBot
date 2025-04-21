@@ -1,0 +1,49 @@
+{
+    "labels": {
+        "Movie": {
+            "properties": [
+                "title",
+                "released",
+                "tagline"
+            ]
+        },
+        "Person": {
+            "properties": [
+                "name",
+                "born"
+            ]
+        }
+    },
+    "relationships": [
+        {
+            "type": "ACTED_IN",
+            "from": "Person",
+            "to": "Movie"
+        },
+        {
+            "type": "DIRECTED",
+            "from": "Person",
+            "to": "Movie"
+        },
+        {
+            "type": "PRODUCED",
+            "from": "Person",
+            "to": "Movie"
+        },
+        {
+            "type": "WROTE",
+            "from": "Person",
+            "to": "Movie"
+        },
+        {
+            "type": "REVIEWED",
+            "from": "Person",
+            "to": "Movie"
+        },
+        {
+            "type": "FOLLOWS",
+            "from": "Person",
+            "to": "Person"
+        }
+    ]
+}

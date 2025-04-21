@@ -1,0 +1,29 @@
+# Secret env files
+.env
+.env.*
+
+# Python bytecode and virtual envs
+**/__pycache__/
+**/*.py[cod]
+**/.venv/
+**/venv/
+
+# Node dependencies and build output
+Frontend/node_modules/
+Frontend/build/
+
+# Docker (if you add overrides or other compose files)
+docker-compose.override.yml
+
+# IDE directories
+.vscode/
+.idea/
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*

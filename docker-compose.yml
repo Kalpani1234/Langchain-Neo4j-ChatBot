@@ -1,0 +1,31 @@
+services:
+  backend:
+    env_file:
+      - .env
+    build:
+      context: ./Backend
+      dockerfile: Dockerfile
+    ports:
+      - "8000:8000"
+    environment:
+      GOOGLE_API_KEY: ${GOOGLE_API_KEY}
+      NEO4J_URL:       ${NEO4J_URL}
+      NEO4J_USERNAME:  ${NEO4J_USERNAME}
+      NEO4J_PASSWORD:  ${NEO4J_PASSWORD}
+    volumes:
+      - ./Backend:/app
+    restart: always
+
+  frontend:
+    build:
+      context: ./Frontend
+      dockerfile: Dockerfile
+    ports:
+      - "3000:80"
+    depends_on:
+      - backend
+    environment:
+      - API_URL=http://backend:8000
+    volumes:
+      - ./Frontend:/var/www/html
+    restart: always

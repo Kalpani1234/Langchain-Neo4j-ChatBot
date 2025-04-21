@@ -1,0 +1,7 @@
+langchain-google-genai
+langchain
+langchain-community
+langchain-neo4j
+pydantic
+fastapi
+uvicorn
