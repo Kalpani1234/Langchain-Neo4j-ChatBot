@@ -1,6 +1,5 @@
 # Secret env files
 .env
-.env.*
 
 # Python bytecode and virtual envs
 **/__pycache__/
